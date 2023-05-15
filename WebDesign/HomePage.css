@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial',sans-serif ;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.5;
+    background-image: url('HomePage.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header {
+    position: fixed;
+    font-size: 1em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    font-weight: bold;
+     line-height: 1.2;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 2em;
+    color: darkblue;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+
+.navigation .btnHome {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 2s;
+}
+
+.navigation .btnHome:hover{
+    background: black;
+    color: black;
+}
+
+.wrapper{
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Paragraph h2{
+    text-align: left;
+
+}
+.Paragraph p{
+    text-align: left;
+}
+
+.SelectBtn{
+    padding-top: 20px;
+    text-align: center;
+    margin: 100px 0;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+}
+
+.Select-box{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.Choose{
+  width:300px;
+  padding:20px;
+}
+
+.Choose select{
+    height:42px;
+    padding:10px 15px;
+    line-height:18px;
+    font-size:16px;
+    width:100%;
+    border:2px solid #ccc;
+    border-radius:8px;
+}
+
+.Choose:after{
+    position:absolute;
+    right:8px;
+    top:50%;
+    margin:-4px;
+    border-top:8px solid #ccc;
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+}
+
+.Choose select:focus{
+    border:2px solid rgba(255, 174, 0, 0.94);
+}
+
+.btn{
+    position:relative;
+    width:42px;
+    height:42px;
+    background:white;
+    border-radius:60px;
+    border: none;
+    cursor: pointer;
+}
+.btn .fa{
+    color:rgba(255, 174, 0, 0.94);
+    font-size:18px;
+}

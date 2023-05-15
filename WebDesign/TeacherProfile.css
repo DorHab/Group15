@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial',sans-serif ;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #aeccea;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.logo {
+    font-size: 2em;
+    color: darkblue;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+.TeacherProfile{
+    margin: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Rate-Data{
+    width: 200px;
+    padding: 10px;
+    display: grid;
+    row-gap: 5px;
+    justify-content: left;
+}
+.Current-Rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+
+}
+.Current-Rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+
+}
+.Current-Rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:darkgray;
+}
+.Current-Rate:not(:checked) > label:before {
+    content: '★ ';
+    color: #ffc700;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:darkgray;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+
+}
+.BooklessonBTN{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,350px) ;
+    column-gap: 10px;
+}
+.btn {
+    position: relative;
+    justify-content: left;
+    align-items: flex-end;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 40px;
+    background:rgb(255, 174, 0);
+    box-shadow: 0 5px 10px rgb(255, 174, 0);
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: black;
+    outline: black;
+}
+img{
+    border: #19181a 2px solid;
+    border-radius: 5px;
+}
+.MyBusinessField{
+ max-width: 960px;
+    margin: 10px auto;
+    padding: 10px;
+    display: grid;
+  row-gap: 20px;
+}
+.Field{
+    background: none;
+    color: #19181a;
+    font-size: 20px;
+    padding: 20px;
+    border: #19181a 1px solid;
+    border-radius: 5px;
+}
+

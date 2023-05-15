@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href ="TeacherProfile.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile</title>
+</head>
+
+<body>
+<header>
+    <h2 class = "logo">Teacher4You</h2>
+    <nav class = "navigation">
+        <a  href ="HomePage.html">Home</a>
+        <a href="Login.html">Login</a>
+        <a href="Sign-up.html">Sign-in</a>
+    </nav>
+</header>
+<div class="TeacherProfile">
+    <h2>Yael Cohen:</h2>
+    <img src="teacherPic.jpg" width="300">
+    <div class="Rate-Data">
+    <P>Current Rate - </P>
+    <div class="Current-Rate">
+              <label  title="5">5 stars</label>
+              <label  title="4">4 stars</label>
+              <label  title="3">3 stars</label>
+              <label  title="2">2 stars</label>
+              <label  title="1">1 star</label>
+    </div>
+    <P>Rate now-</P>
+    <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="5">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="4">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="3">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="2">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="1">1 star</label>
+    </div>
+         </div>
+
+    <div class="MyBusinessField">
+        <div class="Field">
+        <h2>About me-</h2>
+        <p> Online lesson - the lesson is delivered through the computer, the lesson is recorded on video and is available for viewing in the student's lesson diary on the website. Frontal lesson - the lesson at my home (Ramat Gan). Builds a study plan and sends exercises to practice on each topic individually. Cancellations - I am very busy, so cancellation of a class will only be accepted with a 24-hour update (without exception). Please set the lessons carefully.</p>
+            </div>
+
+   <div class="Field">
+        <h2>Education-</h2>
+        <p> University - The Open University.</p>
+    </div>
+        <div class="Field">
+        <h2>Experience-</h2>
+        <p> Prepares students for matriculation 3,4,5 units in mathematics, preparatory and entrance exams. Online lessons specialist.</p>
+    </div>
+    </div>
+    <div class="BooklessonBTN">
+    <button  type="button" class="btn" onclick= SendToPrivate()>Book a Private lesson</button>
+    <button  type="button"  class="btn" onclick=SendToCollective()>Join to collective lesson</button>
+    </div>
+    </div>
+    <script src ="TeacherProfile.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

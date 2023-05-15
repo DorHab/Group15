@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = viewport" content="width=device-width",initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home page</title>
+
+</head>
+
+<body>
+<header>
+    <h1 class = "logo">Teacher4You</h1>
+    <nav class = "navigation">
+        <button class = "btnHome">Home</button>
+        <a href="Sign-up.html">Sign-up</a>
+        <a href="Login.html">Login</a>
+    </nav>
+</header>
+<div class="wrapper">
+    <div class =Paragraph>
+        <h2 >About Us</h2>
+    <p>
+        We are here so that every student can easily find the most suitable and recommended teacher for them,
+        <br> with maximum ease and simplicity.
+        <br> Good luck, site team
+    </p>
+     </div>
+    <div class="SelectBtn">
+        <div class="Select-box">
+            <div Class="Choose">
+            <select id="Topic">
+                <option value=""> Chose Topic</option>
+                <option value="Math 3 units">Math 3 units</option>
+                <option value="Math 4 units">Math 4 units</option>
+                <option value="Math 5 units">Math 4 units</option>
+                <option value="English 3 units">English  3 units</option>
+                <option value="English 4 units">English  4 units</option>
+                <option value="English 5 units">English 5 units</option>
+                <option value="Physics">Physics</option>
+            </select>
+            </div>
+        </div>
+        <div class="Select-box">
+            <div Class="Choose">
+            <select id="Location">
+                <option value=""> Chose Location</option>
+                <option value="South"> South</option>
+                <option value="North"> North</option>
+                <option value="West"> West</option>
+                <option value="East"> East</option>
+                <option value="AnyWhere"> Any Where</option>
+            </select>
+            </div>
+        </div>
+        <div class="Select-box">
+            <div Class="Choose">
+            <select  id="Class" >
+                <option value=""> Chose Class</option>
+                <option value="Zoom"> Zoom</option>
+                <option value="Frontal"> Frontal</option>
+                <option value="Both"> Both</option>
+            </select>
+            </div>
+        </div>
+         <button type = "button" class ="btn" onclick= SearchTeacher() ><i class="fa fa-search"></i></button>
+        </div>
+    <script src ="HomePage.js"></script>
+</div>
+</body>
+</html>
