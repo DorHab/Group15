@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('HomePage.jpg') no-repeat;
+    background-image: url('../Pictures/HomePage.jpg');
     background-size: cover;
     background-size: 100% 100%;
 }

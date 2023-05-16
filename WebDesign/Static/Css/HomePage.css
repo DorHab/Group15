@@ -11,7 +11,7 @@ body{
     align-items: center;
     min-height: 100vh;
     line-height: 1.5;
-    background-image: url('HomePage.jpg');
+    background-image: url('../Pictures/HomePage.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -41,6 +41,14 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+}
+
+.LogoPic{
+    width: 100px;
+    height: 100px;
+    background: url('../Pictures/Logo.png');
+    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .logo {
