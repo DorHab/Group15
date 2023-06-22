@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Home page</title>
+  </head>
+  <body>
+    <header>
+      <div class="header" id="main-header">
+        <div class="logo"><a class="logo" id="logo-link" href="/">Teacher4You</a><img id="logo-img" src="Logo.png" alt="logo"></div>
+        <div class="User-Name" id="Name"><span id="UserFullName"></span></div>
+        <div class="header-right" id="header-right"><a id="home-link" href="/">Home</a>
+          <div class="login-btn" id="login-btn"><a href="Sign-up_As_Student">Student Sign-up</a><a href="SignAsTeacher">Teacher Sign-up</a><a href="Login">Login</a></div>
+          <div class="TeacherProfileButton" id="MyProfile"><a href="TeacherProfile">MyProfile</a></div>
+          <div class="logout-btn" id="Logout"><a onclick="deleteAllCookies()">Logout</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapperHome">
+      <form action="search" method="POST">
+        <div class="Paragraph">
+          <h2>About Us</h2>
+          <p>We are here so that every student can easily find the most suitable and recommended teacher for them,</p>with maximum ease and simplicity.
+          Good luck, site team <3
+        </div>
+        <div class="SelectBtnSearch">
+          <div class="Select-boxSearch">
+            <div class="Choose">
+              <select name="topic" required>
+                <option value="">Choose Topic</option>
+                <option value="Math3units">Math 3 units</option>
+                <option value="Math4units">Math 4 units</option>
+                <option value="Math5units">Math 5 units</option>
+                <option value="English3units">English 3 units</option>
+                <option value="English4units">English 4 units</option>
+                <option value="English5units">English 5 units</option>
+                <option value="Physics">Physics</option>
+              </select>
+            </div>
+          </div>
+          <div class="Select-boxSearch">
+            <div class="Choose">
+              <select name="location" required>
+                <option value="">Choose Location</option>
+                <option value="South">South</option>
+                <option value="North">North</option>
+                <option value="West">West</option>
+                <option value="East">East</option>
+                <option value="AnyWhere">Anywhere</option>
+              </select>
+            </div>
+          </div>
+          <div class="Select-boxSearch">
+            <div class="Choose">
+              <select name="method" required>
+                <option value="">Choose Method</option>
+                <option value="Zoom">Zoom</option>
+                <option value="Frontal">Frontal</option>
+                <option value="Both">Both</option>
+              </select>
+            </div>
+          </div>
+          <button class="btnSearch" type="submit"><span class="icon">
+              <ion-icon name="search"></ion-icon></span></button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="copyright"></div>&copy; 2023 Teacher4You. All rights reserved.
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script src="Functions.js"></script>
+    </footer>
+  </body>
+</html>

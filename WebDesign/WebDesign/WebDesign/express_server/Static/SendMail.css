@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial',sans-serif ;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1b581;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  animation: logoAnimation 2s linear 1; /* Adjust animation duration and iteration count */
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(0); /* Move to the left */
+  }
+}
+
+.logo a {
+  color: darkblue;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+
+.login-btn{
+    display: block;
+    white-space: nowrap;
+}
+
+.logout-btn{
+    display: none;
+}
+
+
+.TeacherProfileButton{
+    display: none;
+}
+
+.User-Name{
+  display: none;
+}
+
+#UserFullName {
+  font-size: 24px;
+  color: white;
+}
+
+.header-right a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  padding: 12px;
+  margin-left: 10px;
+}
+
+
+/* Change the background color on mouse-over */
+.header-right a:hover {
+  background-color: orange;
+  color: black;
+}
+
+/* Style the active/current link */
+.header-right a.active {
+  background-color: #efd3b5;
+  color: rgba(0, 0, 0, 0.94);
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.94);
+}
+
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .header-right a {
+    margin: 5px;
+    padding: 10px;
+  }
+}
+
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('HomePage.jpg');
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+form {
+  width: 400px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: rgba(255, 174, 0, 0.94);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

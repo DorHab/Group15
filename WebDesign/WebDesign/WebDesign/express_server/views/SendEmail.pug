@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="SendMail.css")
+    title Send Email
+  body
+    include includes/Header
+    if typeof V1 === 'undefined'
+      p No teacher found.
+    else
+      .container
+        h1 Send Email
+        form(onsubmit="sendemail(); reset(); return false")
+          input(type="hidden", id="teach", value=V1[0])
+          input(type="hidden", id="from", value=V1[1])
+          label(for="subject") Subject:
+          input(type="text", id="subject", name="subject", required)
+          label(for="message") Message:
+          textarea(id="message", name="message", rows="4", cols="50", required)
+          input(type="submit", value="Send Email")
+        include includes/Footer
+          script(src="Functions.js")
+          script(src="https://smtpjs.com/v3/smtp.js")

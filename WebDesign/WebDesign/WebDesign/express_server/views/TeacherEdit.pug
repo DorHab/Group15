@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Teacher Edit
+    link(rel="stylesheet", href="Teacher.css")
+  body
+    header
+      include includes/Header
+    if typeof V1 === 'undefined'
+      p No teacher found.
+    else
+      div.TeacherProfile
+        - let n = V1[0]
+        h2= n.name
+        div.ProfilePicture
+          input(type="file", accept="image/*")
+        div.Rate-Data
+          p Current Rate -
+          div.Current-Rate
+            each num in [1, 2, 3, 4, 5]
+              if num <= n.rate
+                span(class="star filled") &#9733;
+              else
+                span(class="star") &#9734;
+      form(action="profile", method="post")
+        div.MyBusinessField
+          div.Field
+            h2 About me-
+            input(type="text", name="about", placeholder="write about yourself",value=n.about required)
+          div.Field
+            h2 Education-
+            input(type="text", name="Education",value=n.education required)
+          div.Field
+            h2 Experience-
+            input(type="text", name="Exp",value=n.exp required)
+        div.BooklessonBTN
+          input(type="hidden", name="email" , value=n.mail)
+          button(type="submit", class="btn") Done
+      include includes/Footer
+        script(src="Functions.js")
+
+
+
+
+
+

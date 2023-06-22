@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_Up</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header" id="main-header">
+        <div class="logo"><a class="logo" id="logo-link" href="/">Teacher4You</a><img id="logo-img" src="Logo.png" alt="logo"></div>
+        <div class="User-Name" id="Name"><span id="UserFullName"></span></div>
+        <div class="header-right" id="header-right"><a id="home-link" href="/">Home</a>
+          <div class="login-btn" id="login-btn"><a href="Sign-up_As_Student">Student Sign-up</a><a href="SignAsTeacher">Teacher Sign-up</a><a href="Login">Login</a></div>
+          <div class="TeacherProfileButton" id="MyProfile"><a href="TeacherProfile">MyProfile</a></div>
+          <div class="logout-btn" id="Logout"><a onclick="deleteAllCookies()">Logout</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="form-box">
+        <form action="/StudentSignUp" method="post">
+          <h2>Sign as a Student</h2>
+          <div class="input-box">
+            <input type="email" name="SP_Email" placeholder="Email" id="Email" required>
+          </div>
+          <div class="input-box">
+            <input onkeydown="return /[a-z]/i.test(event.key)" name="FirstName" placeholder="First name" id="FirstName" required>
+          </div>
+          <div class="input-box">
+            <input onkeydown="return /[a-z]/i.test(event.key)" name="LastName" placeholder="Last name" id="LastName" required>
+          </div>
+          <div class="input-box">
+            <input type="number" name="Age" placeholder="Age" min="1" id="Age" required>
+          </div>
+          <div class="input-box">
+            <input type="password" name="SP_Password" placeholder="Enter Password" id="Password" required>
+          </div>
+          <div class="SelectBtn">
+            <div class="Select-box">
+              <select name="Location" required>
+                <option value="">Chose Location</option>
+                <option value="South">South</option>
+                <option value="North">North</option>
+                <option value="West">West</option>
+                <option value="East">East</option>
+                <option value="AnyWhere">Any Where</option>
+              </select>
+            </div>
+            <div class="Select-box">
+              <select name="ChoseGender" required>
+                <option value="">Chose Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="Select-box">
+              <select name="ChoseStatus" required>
+                <option value="">Chose Status</option>
+                <option value="High School">High School</option>
+                <option value="Student">Student</option>
+                <option value="Elementary School">Elementary School</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn" type="submit">Sign-up as Student</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="copyright"></div>&copy; 2023 Teacher4You. All rights reserved.
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </footer>
+</html>

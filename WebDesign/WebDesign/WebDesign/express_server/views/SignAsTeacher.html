@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign AS teacher</title>
+  </head>
+  <body>
+    <header>
+      <div class="header" id="main-header">
+        <div class="logo"><a class="logo" id="logo-link" href="/">Teacher4You</a><img id="logo-img" src="Logo.png" alt="logo"></div>
+        <div class="User-Name" id="Name"><span id="UserFullName"></span></div>
+        <div class="header-right" id="header-right"><a id="home-link" href="/">Home</a>
+          <div class="login-btn" id="login-btn"><a href="Sign-up_As_Student">Student Sign-up</a><a href="SignAsTeacher">Teacher Sign-up</a><a href="Login">Login</a></div>
+          <div class="TeacherProfileButton" id="MyProfile"><a href="TeacherProfile">MyProfile</a></div>
+          <div class="logout-btn" id="Logout"><a onclick="deleteAllCookies()">Logout</a></div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="form-box">
+        <form action="SignAsTeach" method="post">
+          <h2>Sign as a Teacher</h2>
+          <div class="input-box">
+            <input type="email" name="SP_Email" placeholder="Email" id="Email" required>
+          </div>
+          <div class="input-box">
+            <input onkeydown="return /[a-z]/i.test(event.key)" name="FirstName" placeholder="First name" id="FirstName" required>
+          </div>
+          <div class="input-box">
+            <input onkeydown="return /[a-z]/i.test(event.key)" name="LastName" placeholder="Last name" id="LastName" required>
+          </div>
+          <div class="input-box">
+            <input type="number" name="Age" placeholder="Age" min="1" id="Age" required>
+          </div>
+          <div class="input-box">
+            <input type="number" name="Price" placeholder="Price" min="0" id="Price" required>
+          </div>
+          <div class="input-box">
+            <input type="password" name="SP_Password" placeholder="Enter Password" id="Password" required>
+          </div>
+          <div class="SelectBtn">
+            <div class="Select-box">
+              <select name="Location" required>
+                <option value="">Chose Location</option>
+                <option value="South">South</option>
+                <option value="North">North</option>
+                <option value="West">West</option>
+                <option value="East">East</option>
+                <option value="AnyWhere">Any Where</option>
+              </select>
+            </div>
+            <div class="Select-box">
+              <select name="ChoseGender" required>
+                <option value="">Chose Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="Select-box">
+              <select name="ChoseStatus" required>
+                <option value="">Chose Status</option>
+                <option value="high school graduate">High school graduate</option>
+                <option value="1st degree">1st degree</option>
+                <option value="above 1st degree">above 1st degree</option>
+              </select>
+            </div>
+            <div class="Select-box">
+              <select name="ChooseHowToTeach" required>
+                <option value="">Chose Class</option>
+                <option value="Zoom">Zoom</option>
+                <option value="Frontal">Frontal</option>
+                <option value="Both">Both</option>
+              </select>
+            </div>
+          </div>
+          <div class="checkbox-topics">
+            <h3>Chose Topics:</h3>
+            <label>
+              <input type="checkbox" name="Math3units">Math 3 units
+            </label>
+            <label>
+              <input type="checkbox" name="Math4units">Math 4 units
+            </label>
+            <label>
+              <input type="checkbox" name="Math5units">Math 5 units
+            </label>
+            <label>
+              <input type="checkbox" name="English3units">English 3 units
+            </label>
+            <label>
+              <input type="checkbox" name="English4units">English 4 units
+            </label>
+            <label>
+              <input type="checkbox" name="English5units">English 5 units
+            </label>
+            <label>
+              <input type="checkbox" name="Physics">Physics
+            </label>
+          </div>
+          <button class="btn" type="submit">Sign-up as Teacher</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="copyright"></div>&copy; 2023 Teacher4You. All rights reserved.
+  </footer>
+</html>

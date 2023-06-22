@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="SearchResult.css")
+    title Search Result
+
+  body
+    include includes/Header
+    h2 Search Result
+    if typeof V1 === 'undefined'
+      p No search results found.
+    else
+      table.card
+        thead
+          tr
+            th Name
+            th Price
+            th Rate
+            th View profile
+        tbody
+          each n in V1
+            tr
+              td= n.name
+              td= n.price
+              td
+                .rate
+                  each i in [1, 2, 3, 4, 5]
+                    if i <= n.rate
+                      span(class="star filled") &#9733;
+                    else
+                      span(class="star") &#9734;
+              td
+                form(action="/TeacherProfile", method="POST")
+                  input(type="hidden", name="email", value=n.mail)
+                  button(type="submit") View profile
+    include includes/Footer
+      script(src="Functions.js")

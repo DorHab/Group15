@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="Teacher.css")
+    title Teacher Profile
+
+  body
+    include includes/Header
+    if typeof V1 === 'undefined'
+      p No teacher found.
+    else
+      div.TeacherProfile
+        - let n = V1[0]
+        h2= n.name
+        img(src="teacherPic.jpg", width="300")
+        div.Rate-Data
+          p Current Rate -
+          div.Current-Rate
+            each num in [1, 2, 3, 4, 5]
+              if num <= n.rate
+                span(class="star filled") &#9733;
+              else
+                span(class="star") &#9734;
+        div.MyBusinessField
+          div.Field
+            h2 About me -
+            p= n.about
+          div.Field
+            h2 Education -
+            p= n.education
+          div.Field
+            h2 Experience -
+            p= n.exp
+        div.BooklessonBTN
+          form#book-lesson-form(action="SendMail" method="get")
+            button#book-lesson-btn.btn(type="submit") Book a Private lesson
+            input(type="hidden", name="teach" ,id="email", value=n.mail)
+
+          form#edit-form(action="TeacherEdit" method="get")
+            button#edit-btn.btn(type="submit") Edit
+    include includes/Footer
+      script(src="Functions.js")
+
+
+
+
+

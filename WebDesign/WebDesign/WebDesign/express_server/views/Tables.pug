@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="Tables.css")
+    title Db
+  body
+    h1 Please start with creating the tables before insert into
+    .container
+      .part
+        h2 create tables
+        h3 click from up to down
+          form(action="Users" method="Get")
+            button.btn(type="submit") Users
+          form(action="Teachers" method="Get")
+            button.btn(type="submit") Teachers
+          form(action="Passwords" method="Get")
+            button.btn(type="submit") Passwords
+          form(action="TeacherSpecial" method="Get")
+            button.btn(type="submit") TeachersSpeciality
+          form(action="ViewForSearch" method="Get")
+            button.btn(type="submit") ViewForSearch
+          form(action="ViewForNewTeacher" method="Get")
+            button.btn(type="submit") ViewForNewTeacher
+          form(action="ViewFullNames" method="Get")
+            button.btn(type="submit") ViewFullNames
+      .part
+        h2 insert into tables
+        h3 click from up to down
+        form(action="InsertIntoUsers" method="Get")
+          button.btn(type="submit") Users
+        form(action="InsertIntoPasswords" method="Get")
+          button.btn(type="submit") Passwords
+        form(action="InsertIntoTeachers" method="Get")
+          button.btn(type="submit") Teachers
+        form(action="InsertIntoTeachersSpecial" method="Get")
+          button.btn(type="submit") TeachersSpeciality
+      .part
+        h2 drop tables
+        h3 click from up to down
+            form(action="DropPasswords" method="Get")
+              button.btn(type="submit") Passwords
+            form(action="DropTeacherSpecial" method="Get")
+              button.btn(type="submit") TeachersSpeciality
+            form(action="DropTeachers" method="Get")
+              button.btn(type="submit") Teachers
+            form(action="DropUsers" method="Get")
+              button.btn(type="submit") Users
+            form(action="DropViewForSearch" method="Get")
+              button.btn(type="submit") ViewForSearch
+            form(action="DropViewForNewTeacher" method="Get")
+              button.btn(type="submit") ViewForNewTeacher
+            form(action="DropViewForFullName" method="Get")
+              button.btn(type="submit") ViewFullName

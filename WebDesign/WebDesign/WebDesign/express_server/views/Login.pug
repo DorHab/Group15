@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Log-in
+    link(rel="stylesheet", href="style.css")
+  body
+    include includes/Header
+    .wrapper
+      .form-box.login
+        form(action="Logining", method="post")
+          h2 Login
+          .input-boxL
+            span.icon
+              ion-icon(name="person")
+            input(type="email", name="username", placeholder="Enter Email", required)
+          .input-boxL
+            span.icon
+              ion-icon(name="lock-closed")
+            input(type="password", name="password", placeholder="Enter Password", required)
+          .remember-forgot
+            label
+              input(type="checkbox")
+              | Remember me
+          button.btn(type="submit") Login
+          p.login-register
+              | Don't have an account?
+              a(href="Sign-up_As_Student") StudentSign-up
+          p.login-register
+              | Don't have an account?
+              a(href="SignAsTeacher") TeacherSign-up
+  include includes/Footer
+    script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")

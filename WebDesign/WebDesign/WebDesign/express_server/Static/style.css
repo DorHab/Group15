@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial',sans-serif ;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1b581;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  animation: logoAnimation 2s linear 1; /* Adjust animation duration and iteration count */
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(0); /* Move to the left */
+  }
+}
+
+.logo a {
+  color: darkblue;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+
+.login-btn{
+    display: block;
+    white-space: nowrap;
+}
+
+.logout-btn{
+    display: none;
+}
+
+
+.TeacherProfileButton{
+    display: none;
+}
+
+.User-Name{
+  display: none;
+}
+
+#UserFullName {
+  font-size: 24px;
+  color: white;
+}
+
+.header-right a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  padding: 12px;
+  margin-left: 10px;
+}
+
+
+/* Change the background color on mouse-over */
+.header-right a:hover {
+  background-color: orange;
+  color: black;
+}
+
+/* Style the active/current link */
+.header-right a.active {
+  background-color: #efd3b5;
+  color: rgba(0, 0, 0, 0.94);
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.94);
+}
+
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .header-right a {
+    margin: 5px;
+    padding: 10px;
+  }
+}
+
+
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('HomePage.jpg');
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+
+
+.btn{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background:rgb(255, 174, 0);
+    box-shadow: 0 5px 10px rgb(255, 255, 255);
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.wrapper{
+    width: 400px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 10px ;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center ;
+}
+
+.wrapper h2{
+    font-size: 30px;
+    color:rgb(255, 174, 0);
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    margin: 10px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgba(255, 174, 0, 0.94);
+    padding: 0 5px;
+    pointer-events: none;
+}
+
+.input-box input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+}
+
+.SelectBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 10px 0;
+}
+
+.Select-box {
+  padding: 0 10px;
+  width: 140px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.94);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #999;
+  margin-bottom: 10px; /* Add margin-bottom to create space between select boxes */
+}
+
+.Select-box label {
+  color: #19181a;
+}
+
+.Select-box select {
+  z-index: 10;
+  position: relative;
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  height: 25px;
+}
+
+
+.checkbox-topics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-topics h3 {
+  font-size: 18px;
+  color: rgba(255, 174, 0, 0.94);
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%; /* Ensure the h3 takes full width */
+}
+
+.checkbox-topics label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-right: 10px; /* Add some spacing between checkboxes */
+}
+
+.checkbox-topics input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/*for Login*/
+.input-boxL{
+    text-align: center;
+    position: relative;
+    margin: 30px 0;
+    width: 320px;
+}
+
+.input-boxL input{
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    color: black;
+    padding: 0 10px 0 35px;
+    background: transparent;
+    border: 1.5px solid black;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-boxL .icon{
+    position: absolute;
+    left: 10px;
+    font-size: 1.2em;
+    line-height: 55px;
+}
+
+.remember-forgot{
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label{
+    color: black;
+    font-size: 14px;
+}
+
+.remember-forgot label input{
+accent-color:rgb(255, 174, 0);
+}
+
+.login-register{
+    font-size: .9em;
+    text-align: center;
+    margin: 25px 0;
+}
+/*for Login*/
+
+/*for HomePage*/
+.wrapperHome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Paragraph {
+  padding: 20px;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.SelectBtnSearch {
+  padding-top: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Select-boxSearch {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Modified this line */
+}
+
+.Choose {
+  width: 300px;
+  padding: 20px;
+}
+
+.Choose select {
+  height: 42px;
+  padding: 10px 15px;
+  line-height: 18px;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.Choose:after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin: -4px;
+  border-top: 8px solid #ccc;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.Choose select:focus {
+  border: 2px solid rgba(255, 174, 0, 0.94);
+}
+
+.btnSearch {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background: white;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.btnSearch .icon {
+  color: rgba(255, 174, 0, 0.94);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .SelectBtnSearch {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Select-boxSearch {
+    max-width: 100%;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center; /* Added this line */
+  }
+
+  .Choose {
+    width: 100%;
+    padding: 10px;
+  }
+}
+/*for HomePage*/

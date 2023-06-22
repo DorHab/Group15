@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Sign_Up
+    link(rel="stylesheet", href="style.css")
+  body
+    include includes/Header
+    .wrapper
+      .form-box
+        form(action="/StudentSignUp", method="post")
+          h2 Sign as a Student
+          .input-box
+            input(type="email", name="SP_Email", placeholder="Email", id="Email", required)
+          .input-box
+            input(onkeydown="return /[a-z]/i.test(event.key)", name="FirstName", placeholder="First name", id="FirstName", required)
+          .input-box
+            input(onkeydown="return /[a-z]/i.test(event.key)", name="LastName", placeholder="Last name", id="LastName", required)
+          .input-box
+            input(type="number", name="Age", placeholder="Age", min="1", id="Age", required)
+          .input-box
+            input(type="password", name="SP_Password", placeholder="Enter Password", id="Password", required)
+          .SelectBtn
+            .Select-box
+              select(name="Location" required)
+                option(value="") Chose Location
+                option(value="South") South
+                option(value="North") North
+                option(value="West") West
+                option(value="East") East
+                option(value="AnyWhere") Any Where
+            .Select-box
+              select(name="ChoseGender" required)
+                option(value="") Chose Gender
+                option(value="Male") Male
+                option(value="Female") Female
+            .Select-box
+              select(name="ChoseStatus" required)
+                option(value="") Chose Status
+                option(value="High School") High School
+                option(value="Student") Student
+                option(value="Elementary School") Elementary School
+          button.btn(type="submit") Sign-up as Student
+  include includes/Footer
+    script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")

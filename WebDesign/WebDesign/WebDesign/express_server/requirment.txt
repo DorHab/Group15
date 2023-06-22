@@ -1,0 +1,61 @@
+//modules
+
+our project depends in installing the following parts:
+express , body-parser , mysql2 , path , cookie-parser , csvtojson ,-g pug-cli
+
+// path to tables
+
+to get accesses to Create , Insert , Drop Tables u should use the path /tables
+
+// sql syntax
+
+My Sql Tables:
+create table Users(
+mail varchar(255) NOT NULL PRIMARY KEY,
+firstname varchar(255) NOT NULL,
+lastname varchar(255) not NULL,
+location varchar(255) not null,
+age int not null,
+gender varchar(255) not null,
+stat varchar(255) not null
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE Teachers (
+  mail varchar(255) NOT NULL PRIMARY KEY,
+  price int NOT NULL,
+  method varchar(255) NOT NULL,
+  rate int NOT NULL,
+  about varchar(1000),
+  exp varchar(1000),
+  education varchar(1000),
+  FOREIGN KEY (mail) REFERENCES Users(mail)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table TeachersSpecial(
+mail varchar(255) NOT NULL ,
+special varchar(255) NOT NULL ,
+primary key(mail,special),
+FOREIGN KEY (mail) REFERENCES Users(mail)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+create table PassWords(
+mail varchar(255) NOT NULL PRIMARY KEY,
+pass varchar(255) not null,
+type int not null,
+FOREIGN KEY (mail) REFERENCES Users(mail)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+create view ForSearch As
+select t.mail ,t.method,u.location,t.rate,concat(concat(u.firstname,' '), u.lastname) AS name,t.price , ts.special
+from Teachers as t join Users as u on t.mail = u.mail join TeachersSpecial as ts on t.mail = ts.mail
+order by t.rate desc;
+
+create view ForNewTeacher As
+select t.mail,t.rate,concat(concat(u.firstname,' '), u.lastname) AS name,t.about,t.exp,t.education
+from Teachers as t join Users as u on t.mail=u.mail;
+
+create view FullNames As
+select mail , concat(concat(firstname,' '),lastname) AS name
+from users

@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    link(rel="stylesheet", href="style.css")
+    title Home page
+
+  body
+    include includes/Header
+    div.wrapperHome
+      form(action="search", method="POST")
+        div.Paragraph
+          h2 About Us
+          p We are here so that every student can easily find the most suitable and recommended teacher for them,
+          | with maximum ease and simplicity.
+          | Good luck, site team <3
+        div.SelectBtnSearch
+          div.Select-boxSearch
+            div.Choose
+              select(name="topic" required)
+                option(value="") Choose Topic
+                option(value="Math3units") Math 3 units
+                option(value="Math4units") Math 4 units
+                option(value="Math5units") Math 5 units
+                option(value="English3units") English 3 units
+                option(value="English4units") English 4 units
+                option(value="English5units") English 5 units
+                option(value="Physics") Physics
+          div.Select-boxSearch
+            div.Choose
+              select(name="location" required)
+                option(value="") Choose Location
+                option(value="South") South
+                option(value="North") North
+                option(value="West") West
+                option(value="East") East
+                option(value="AnyWhere") Anywhere
+          div.Select-boxSearch
+            div.Choose
+              select(name="method" required)
+                option(value="") Choose Method
+                option(value="Zoom") Zoom
+                option(value="Frontal") Frontal
+                option(value="Both") Both
+          button.btnSearch(type="submit")
+            span.icon
+              ion-icon(name="search")
+    include includes/Footer
+      script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+      script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
+      script(src="Functions.js")
